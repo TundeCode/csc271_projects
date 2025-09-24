@@ -10,29 +10,28 @@
 <form action="index.html" method="get">
 
     <label><strong>Recipe Name:</strong></label><br>
-<input type="text" required><br><br>
-
-<label><strong>Ingredients & Instructions</strong></label><br>
-<textarea rows="6" cols="40" required></textarea><br><br>
-
-<p><strong>Difficulty</strong></p>
-<input type="radio">
-<label>Easy</label><br>
-<input type="radio">
-<label>Medium</label><br>
-<input type="radio">
-<label>Hard</label><br><br>
-
-<p><strong>Dietary Preferences:</strong></p>
-<input type="checkbox">
-<label>Vegetarian</label><br>
-<input type="checkbox">
-<label>Vegan</label><br>
-<input type="checkbox">
-<label>Gluten-Free</label><br><br>
-
-<button type="submit">Submit Recipe</button>
-
+    <input type="text" name="recipe-name" required><br><br>
+    
+    <label><strong>Ingredients & Instructions</strong></label><br>
+    <textarea name="details" rows="6" cols="40" required></textarea><br><br>
+    
+    <p><strong>Difficulty</strong></p>
+    <input type="radio" name="difficulty" value="Easy">
+    <label>Easy</label><br>
+    <input type="radio" name="difficulty" value="Medium">
+    <label>Medium</label><br>
+    <input type="radio" name="difficulty" value="Hard">
+    <label>Hard</label><br><br>
+    
+    <p><strong>Dietary Preferences:</strong></p>
+    <input type="checkbox" name="diet" value="Vegetarian">
+    <label>Vegetarian</label><br>
+    <input type="checkbox" name="diet" value="Vegan">
+    <label>Vegan</label><br>
+    <input type="checkbox" name="diet" value="Gluten-Free">
+    <label>Gluten-Free</label><br><br>
+    
+    <button type="submit">Submit Recipe</button>
     
 </form>
 
