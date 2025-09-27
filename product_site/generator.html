@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--
+  Name: Babatunde Fajolujo
+  Date: 2025-09-26
+  File: generator.html (Flashcard Generator Page)
+  Description: Users type a topic and generate study cards. 
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuickCards — Flashcard Generator</title>
+</head>
+
+<body>
+ 
+    <!-- ===== Header & ===== -->
+  <header>
+    <table style="width:100%; border:0;">
+      <tr>
+        <td style="width:80px;">
+          <img src="images/QuickCardslogo.png" alt="QuickCards logo: stacked flashcards with a question mark" width="70" height="70">
+        </td>
+        <td><h1 style="margin:0;">Flashcard Generator</h1></td>
+        <td align="right">
+          <nav>
+            <a href="index.html">Home</a> |
+            <a href="generator.html">Flashcard Generator</a> |
+            <a href="examples.html">Examples</a> |
+            <a href="contact.html">Contact</a>
+          </nav>
+        </td>
+      </tr>
+    </table>
+  </header>
+
+  <hr>
+
+  <main>
+    <!-- ===== Generator Input Section ===== -->
+    <section aria-labelledby="make-cards-title">
+      <h2 id="make-cards-title">Type a Topic, Generate Cards</h2>
+      <p>Enter a <strong>study topic</strong> and choose your deck options. At least the topic is required.</p>
+
+      <!-- Form: text,radio, checkbox ,required validation -->
+      <form action="#" method="get">
+        <label for="topic">Enter Topic (required):</label><br>
+        <input id="topic" name="topic" type="text" placeholder="e.g., World War II"
+               required maxlength="80"><br><br>
+
+        <fieldset>
+          <legend>Deck Size</legend>
+          <label><input type="radio" name="size" value="10" checked> 10 cards</label><br>
+          <label><input type="radio" name="size" value="20"> 20 cards</label><br>
+          <label><input type="radio" name="size" value="30"> 30 cards</label>
+        </fieldset>
+        <br>
+
+        <fieldset>
+          <legend>Options</legend>
+          <label><input type="checkbox" name="shuffle" value="yes"> Shuffle on generate</label><br>
+          <label><input type="checkbox" name="showDefinitions" value="yes"> Show definitions first</label>
+        </fieldset>
+        <br>
+
+
+        <button type="submit">Generate Flashcards</button>
+      </form>
+    </section>
+
+    <br>
+
+    <!-- ===== Generated Deck Preview (placeholder) ===== -->
+    <h2>Generated Deck Preview</h2>
+    <p>(Example flashcards generated for the topic <strong>World War II</strong>)</p>
+    <ul>
+      <li><strong>Allied Powers:</strong> The alliance of the US, UK, USSR, and others who fought against the Axis.</li>
+      <li><strong>Axis Powers:</strong> Germany, Italy, and Japan’s military alliance during WWII.</li>
+      <li><strong>Atomic Bombs:</strong> Weapons dropped on Hiroshima and Nagasaki in August 1945, ending the war with Japan.</li>
+    </ul>
+    
+    </section>
+
+    <hr>
+
+    <!-- ===== Images (two) related to product ===== -->
+      <h2>How QuickCards Looks</h2>
+      <img src="images/Flashcards Studying GIF by Hamelin Brands.gif" alt="Student study desk with notebook and laptop open to flashcards"
+           width="460" height="260">
+      <br><br>
+      <img src="images/studying.jpg" alt="Mobile view showing a flashcard being flipped"
+           width="320" height="320">
+    </section>
+
+    <hr>
+
+    <!-- ===== Table relevant to page ===== -->
+      <h2>Deck Summary (Example)</h2>
+      <table border="1" cellpadding="8" cellspacing="0">
+        <caption>Sample output details for a generated deck</caption>
+        <thead>
+          <tr>
+            <th>Topic</th>
+            <th>Cards</th>
+            <th>Estimated Study Time</th>
+            <th>Mode</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>World War II</td>
+            <td>10</td>
+            <td>6–8 minutes</td>
+            <td>Shuffle</td>
+          </tr>
+          <tr>
+            <td>Biology: Cell Parts</td>
+            <td>20</td>
+            <td>12–15 minutes</td>
+            <td>Definitions First</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+    <!-- ===== Video embed (YouTube) ===== -->
+   
+      <h2>Study Tips Video</h2>
+      <p>Short video on effective study techniques </p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/TjPFZaMe2yw?si=NXVEGdANa8j9grhu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+  </main>
+
+  <hr>
+
+
+</body>
+</html>
