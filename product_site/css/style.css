@@ -1,118 +1,81 @@
 /* ================================
-   QuickCards Site Styles (global)
+   QuickCards Layout & Responsive Styles
    Author: Babatunde Fajolujo
    Date: 2025-09-26
-   Notes:
-   - Element selectors: body, h1, p, a, nav, header, footer
-   - ID selector: #main-title
-   - Class selectors: .card, .btn
-   ================================ */
+================================ */
 
-/* ---- Base / Background on every page ---- */
-:root {
-    --bg: #c59a3a;          
-    --text: #1a202c;       
-    --muted: #4a5568;       
-    --accent: #1e66f5;      
-    --card: #ffffff;        
-    --line: #e2e8f0;        
-  }
-  
-  html, body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; /* with fallbacks */
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* ---- Layout Spacing ---- */
-  header, main, footer {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 16px 20px;
-    background: var(--card);
-    border-radius: 8px;
-  }
-  
-  /* ---- Headings ---- */
-  h1, h2, h3 {
-    color: var(--text);
-    margin: 0 0 8px;
-  }
-  
-  /* ID selector: main page titles */
-  #main-title {
-    font-size: 2rem;
-    letter-spacing: 0.3px;
-    color: #111111;
-  }
-  
-  /* ---- Paragraphs ---- */
-  p { 
-    color: var(--muted); 
-    margin: 8px 0 14px; 
-  }
-  ul, ol { 
-    margin: 8px 0 16px 22px; 
-  }
-  
-  /* ---- Nav & Links ---- */
-  nav { margin: 8px 0 12px; }
-  
-  a:link    { color: var(--accent); text-decoration: none; }
-  a:visited { color: #7c4dff; }               /* distinguish visited links */
-  a:hover   { text-decoration: underline; }   /* hover state */
-  
-  /* ---- Card containers (class selector) ---- */
-  .card {
-    background: var(--card);
-    border: 1px solid var(--line);
-    padding: 14px 16px;
-    margin: 14px 0;
-    border-radius: 8px;
-  }
-  
-  /* ---- Buttons (class selector) ---- */
-  .btn {
-    display: inline-block;
-    padding: 8px 12px;
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    border-radius: 6px;
-  }
-  .btn:hover {
-    text-decoration: none;
-    background: var(--accent);
-    color: #fff;
-  }
-  
-  /* ---- Footer ---- */
-  footer { 
-    border-top: 1px solid var(--line); 
-    margin-top: 24px; 
-    padding-top: 10px;
-    text-align: center;
-    font-size: 0.9em;
-    color: var(--muted);
-  }
-  
-  /* ---- Extra polish ---- */
-  hr { 
-    border: 0; 
-    height: 1px; 
-    background: var(--line); 
-    margin: 20px 0; 
-  }
-  
-  /* ---- Responsive adjustments ---- */
-  @media (max-width: 640px) {
-    header, main, footer {
-      padding: 12px 10px;
-    }
-    #main-title {
-      font-size: 1.6rem;
-    }
-  }
-  
+/* Palette */
+:root{
+  --bg: #8b5e3c;      
+  --header: #a97142;  
+  --content: #fff;    
+  --text: #1a202c; 
+  --muted:#4a5568;
+  --accent:#ffd166;   /* gold */
+  --line:#c59a3a;
+}
+
+/* Base */
+html, body { margin:0; padding:0; background:var(--bg); font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; line-height:1.6; color:var(--text); }
+
+/* ===== Header (wrapped in .site-header) ===== */
+.site-header{
+  overflow: hidden;             /* clips anything that spills */
+  background: var(--header);
+  padding: 10px 14px;
+}
+.site-header header{ max-width: 1000px; margin: 0 auto; }
+.site-header img{ float:left; display:block; margin-right:12px; }
+
+/* nav links float right on wide screens */
+nav{ overflow:hidden; }
+.nav-link{
+  float: right;
+  color:#000;                   /* readable on light header */
+  text-decoration:none;
+  font-weight:700;
+  padding:10px 12px;
+  border-radius:6px;
+}
+.nav-link:hover{ background:#00000015; text-decoration:underline; }
+.nav-link:active{ transform: translateY(1px); }
+.nav-link.active{ background:#000; color:var(--accent); } /* current page */
+
+/* ===== Main content box (CSS box model) ===== */
+#content{
+  float:none;                   /* you can set left/right if you prefer */
+  width: 90%;
+  max-width: 1000px;
+  margin: 18px auto;            /* centers the box */
+  background: var(--content);   /* solid bg so text/images are clear */
+  padding: 18px;
+  border: 2px solid var(--line);
+  border-radius: 10px;
+}
+#content p{ color: var(--muted); }
+
+/* ===== Images: float + margin so text doesn’t touch ===== */
+.float-left  { float:left;  margin: 6px 14px 8px 0; }
+.float-right { float:right; margin: 6px 0 8px 14px; }
+.float-center{ display:block; margin:10px auto; }
+
+/* Never upscale images beyond their file size */
+img{ max-width:100%; height:auto; }
+
+/* Footer */
+.site-footer{
+  max-width:1000px; margin:20px auto; padding:10px; color:#fff; text-align:center;
+  border-top:2px solid var(--line);
+}
+
+/* ===== Responsive: screens ≤ 600px ===== */
+@media (max-width:600px){
+  /* Header links stack vertically and don’t float */
+  .nav-link{ float:none; display:block; text-align:left; margin:6px 0; }
+
+  /* Content fills width and text gets larger */
+  #content{ width: 100%; margin: 10px auto; font-size: 1.05rem; }
+
+  /* Images scale to fit (already max-width:100%), but remove floats */
+  .float-left, .float-right{ float:none; display:block; margin:10px auto; }
+}

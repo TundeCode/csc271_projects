@@ -2,8 +2,8 @@
 <!--
   Name: Babatunde Fajolujo
   Date: 2025-09-26
-  File: generator.html (Flashcard Generator Page)
-  Description: Users type a topic and generate study cards. 
+  File: generator.html (Flashcard Generator)
+  Desc: Topic input, options, preview, images, table, and video embed.
 -->
 <html lang="en">
 <head>
@@ -12,130 +12,105 @@
   <title>QuickCards — Flashcard Generator</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
- 
-    <!-- ===== Header & ===== -->
-  <header>
-    <table style="width:100%; border:0;">
-      <tr>
-        <td style="width:80px;">
-          <img src="images/QuickCardslogo.png" alt="QuickCards logo: stacked flashcards with a question mark" width="70" height="70">
-        </td>
-        <td><h1 style="margin:0;">Flashcard Generator</h1></td>
-        <td align="right">
-          <nav>
-            <a href="homepage.html">Home</a> |
-            <a href="generator.html">Flashcard Generator</a> |
-            <a href="examples.html">Examples</a> |
-            <a href="contact.html">Contact</a>
-          </nav>
-        </td>
-      </tr>
-    </table>
-  </header>
 
-  <hr>
+  <!-- ===== Site Header ===== -->
+  <div class="site-header">
+    <header>
+      <img src="images/QuickCardslogo.png" alt="QuickCards logo" width="70" height="70">
+      <nav>
+        <a href="homepage.html" class="nav-link">Home</a>
+        <a href="generator.html" class="nav-link active">Flashcard Generator</a>
+        <a href="examples.html" class="nav-link">Examples</a>
+      </nav>
+    </header>
+  </div>
 
-  <main>
-    <!-- ===== Generator Input Section ===== -->
-    <section aria-labelledby="make-cards-title">
-      <h2 id="make-cards-title">Type a Topic, Generate Cards</h2>
-      <p>Enter a <strong>study topic</strong> and choose your deck options. At least the topic is required.</p>
+  <!-- ===== Main Content ===== -->
+  <div id="content">
+    <h1 id="main-title">Flashcard Generator</h1>
 
-      <!-- Form: text,radio, checkbox ,required validation -->
-      <form action="#" method="get">
-        <label for="topic">Enter Topic (required):</label><br>
-        <input id="topic" name="topic" type="text" placeholder="e.g., World War II"
-               required maxlength="80"><br><br>
+    <h2>Type a Topic, Generate Cards</h2>
+    <p>Enter a <strong>study topic</strong> and choose your deck options. Topic is required.</p>
 
-        <fieldset>
-          <legend>Deck Size</legend>
-          <label><input type="radio" name="size" value="10" checked> 10 cards</label><br>
-          <label><input type="radio" name="size" value="20"> 20 cards</label><br>
-          <label><input type="radio" name="size" value="30"> 30 cards</label>
-        </fieldset>
-        <br>
+    <!-- Form with validation and options -->
+    <form action="#" method="get">
+      <label for="topic">Enter Topic (required):</label><br>
+      <input id="topic" name="topic" type="text" placeholder="e.g., World War II" required maxlength="80"><br><br>
 
-        <fieldset>
-          <legend>Options</legend>
-          <label><input type="checkbox" name="shuffle" value="yes"> Shuffle on generate</label><br>
-          <label><input type="checkbox" name="showDefinitions" value="yes"> Show definitions first</label>
-        </fieldset>
-        <br>
+      <fieldset>
+        <legend>Deck Size</legend>
+        <label><input type="radio" name="size" value="10" checked> 10 cards</label><br>
+        <label><input type="radio" name="size" value="20"> 20 cards</label><br>
+        <label><input type="radio" name="size" value="30"> 30 cards</label>
+      </fieldset><br>
 
+      <fieldset>
+        <legend>Options</legend>
+        <label><input type="checkbox" name="shuffle" value="yes"> Shuffle on generate</label><br>
+        <label><input type="checkbox" name="defsfirst" value="yes"> Show definitions first</label>
+      </fieldset><br>
 
-        <button type="submit">Generate Flashcards</button>
-      </form>
-    </section>
+      <label for="email">Send link to my email (optional):</label><br>
+      <input id="email" name="email" type="email" placeholder="you@uri.edu"><br><br>
 
-    <br>
+      <button type="submit" class="btn">Generate Flashcards</button>
+    </form>
 
-    <!-- ===== Generated Deck Preview (placeholder) ===== -->
+    <hr>
+
     <h2>Generated Deck Preview</h2>
     <p>(Example flashcards generated for the topic <strong>World War II</strong>)</p>
     <ul>
-      <li><strong>Allied Powers:</strong> The alliance of the US, UK, USSR, and others who fought against the Axis.</li>
-      <li><strong>Axis Powers:</strong> Germany, Italy, and Japan’s military alliance during WWII.</li>
-      <li><strong>Atomic Bombs:</strong> Weapons dropped on Hiroshima and Nagasaki in August 1945, ending the war with Japan.</li>
+      <li><strong>Allied Powers:</strong> US, UK, USSR and allies against Axis.</li>
+      <li><strong>Axis Powers:</strong> Germany, Italy, Japan alliance.</li>
+      <li><strong>D-Day:</strong> Allied invasion of Normandy, June 6, 1944.</li>
+      <li><strong>Holocaust:</strong> Genocide of six million Jews and others by Nazi Germany.</li>
+      <li><strong>Atomic Bombs:</strong> Hiroshima and Nagasaki, August 1945.</li>
     </ul>
-    
-    </section>
 
     <hr>
 
-    <!-- ===== Images (two) related to product ===== -->
-      <h2>How QuickCards Looks</h2>
-      <img src="images/Flashcards Studying GIF by Hamelin Brands.gif" alt="Student study desk with notebook and laptop open to flashcards"
-           width="460" height="260">
-      <br><br>
-      <img src="images/studying.jpg" alt="Mobile view showing a flashcard being flipped"
-           width="320" height="320">
-    </section>
+    <h2>How QuickCards Looks</h2>
+    <img src="images/studying.jpg" alt="Student studying with flashcards" class="float-right" width="320" height="320">
+    <img src="images/Flashcards Studying GIF by Hamelin Brands.gif" alt="Flashcards arranged neatly on a desk" class="float-left" width="320" height="200">
+    <p>
+      Images are saved at display size to keep pages fast. Text wraps around the images so the content flows naturally
+      without crowding the pictures.
+    </p>
 
     <hr>
 
-    <!-- ===== Table relevant to page ===== -->
-      <h2>Deck Summary (Example)</h2>
-      <table border="1" cellpadding="8" cellspacing="0">
-        <caption>Sample output details for a generated deck</caption>
-        <thead>
-          <tr>
-            <th>Topic</th>
-            <th>Cards</th>
-            <th>Estimated Study Time</th>
-            <th>Mode</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>World War II</td>
-            <td>10</td>
-            <td>6–8 minutes</td>
-            <td>Shuffle</td>
-          </tr>
-          <tr>
-            <td>Biology: Cell Parts</td>
-            <td>20</td>
-            <td>12–15 minutes</td>
-            <td>Definitions First</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+    <h2>Deck Summary (Example)</h2>
+    <table border="1" cellpadding="8" cellspacing="0">
+      <caption>Sample output details for generated decks</caption>
+      <thead>
+        <tr>
+          <th>Topic</th><th>Cards</th><th>Estimated Study Time</th><th>Mode</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>World War II</td><td>10</td><td>6–8 minutes</td><td>Shuffle</td></tr>
+        <tr><td>Biology: Cell Parts</td><td>20</td><td>12–15 minutes</td><td>Definitions First</td></tr>
+      </tbody>
+    </table>
 
     <hr>
 
-    <!-- ===== Video embed (YouTube) ===== -->
-   
-      <h2>Study Tips Video</h2>
-      <p>Short video on effective study techniques </p>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/TjPFZaMe2yw?si=NXVEGdANa8j9grhu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </section>
-  </main>
+    <h2>Study Tips Video</h2>
+    <p>Short video on effective study techniques.</p>
+    <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/5MgBikgcWnY"
+      title="Study techniques video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+  </div>
 
-  <hr>
-
-
+  <footer class="site-footer">
+    &copy; 2025 QuickCards • <a href="mailto:bfakolujo@uri.edu">bfakolujo@uri.edu</a>
+  </footer>
 </body>
 </html>
