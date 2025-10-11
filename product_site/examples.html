@@ -2,9 +2,9 @@
 <!--
   Name: Babatunde Fajolujo
   Date: 2025-09-26
-
+  File: examples.html (Examples / Demo)
+  Desc: Sample decks with links to generator and all pages.
 -->
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -12,20 +12,24 @@
   <title>QuickCards — Examples & Demo</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <!-- ===== Header & Nav ===== -->
-  <header>
-    <h1 id="main-title">Examples & Demo</h1>
-    <nav>
-      <!-- Relative links to all existing pages -->
-      <a href="index.html">Home</a> |
-      <a href="generator.html">Flashcard Generator</a> |
-      <a href="examples.html">Examples</a>
-    </nav>
-  </header>
 
-  <main>
+  <!-- ===== Site Header ===== -->
+  <div class="site-header">
+    <header>
+      <img src="images/QuickCardslogo.png" alt="QuickCards logo" width="70" height="70">
+      <nav>
+        <a href="homepage.html" class="nav-link">Home</a>
+        <a href="generator.html" class="nav-link">Flashcard Generator</a>
+        <a href="examples.html" class="nav-link active">Examples</a>
+      </nav>
+    </header>
+  </div>
+
+  <!-- ===== Main Content ===== -->
+  <div id="content">
+    <h1 id="main-title">Examples & Demo</h1>
+
     <section>
       <h2>Try a Sample Deck</h2>
       <p>Preview how QuickCards presents terms and definitions. These examples show what users would see after generating a deck.</p>
@@ -59,8 +63,10 @@
         <li>Study your cards and iterate.</li>
       </ol>
     </section>
-  </main>
+  </div>
 
- 
+  <footer class="site-footer">
+    &copy; 2025 QuickCards • <a href="mailto:bfakolujo@uri.edu">bfakolujo@uri.edu</a>
+  </footer>
 </body>
 </html>

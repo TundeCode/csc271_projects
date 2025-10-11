@@ -1,97 +1,65 @@
 <!DOCTYPE html>
 <!--
-  Name: Babatunde Fakolujo
-  Date: 9/21/25
-  File: index.html (Homepage)
+  Name: Babatunde Fajolujo
+  Date: 2025-09-26
+  File: homepage.html (Home)
+  Desc: Landing page for QuickCards with intro, benefits, and helpful links.
 -->
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>QuickCards </title>
+  <title>QuickCards — Study Smarter, Not Longer</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <!-- ===== Site Header & Navigation ===== -->
-  <header>
-    <!-- Logo aligned before the title got help from ai -->
-    <table style="width:100%; border:0;">
-      <tr>
-        <td style="width:80px;">
-          <img src="images/QuickCardslogo.png" 
-               alt="QuickCards Logo" 
-               width="120" height="100">
-        </td>
-        <td>
-          <h1 style="margin:0;">QuickCards</h1>
-        </td>
-        <td align="right">
-          
-          <!-- Navigation -->
-          <nav>
-            <a href="homepage.html">Home</a> |
-            <a href="generator.html">Flashcard Generator</a> |
-            <a href="examples.html">Examples</a> |
-            <a href="contact.html">Contact</a>
-          </nav>
-        </td>
-      </tr>
-    </table>
-  </header>
-  
-  
 
-  <hr>
+  <!-- ===== Site Header ===== -->
+  <div class="site-header">
+    <header>
+      <img src="images/QuickCardslogo.png" alt="QuickCards logo" width="70" height="70">
+      <nav>
+        <a href="homepage.html" class="nav-link active">Home</a>
+        <a href="generator.html" class="nav-link">Flashcard Generator</a>
+        <a href="examples.html" class="nav-link">Examples</a>
+      </nav>
+    </header>
+  </div>
 
-  <!-- ===== Intro Section ===== -->
-  <main>
-    <section aria-labelledby="intro-title">
-      <h2 id="intro-title">Study Smarter, Not Longer</h2> <!-- Subsection Heading -->
-      <p>
-        Welcome to <strong>QuickCards</strong>—the quickest way to create a ready to use deck of flashcards on any subjects 
-        In just a few second, a subject can be typed, gernated, and ready to study.
-        It’s <em>simple, focused,</em>  and <strong>made for</strong> busy students.
-        
-      </p>
-      <p>
-        This homepage explains what QuickCards is and why it helps. The  goal is to reduce prep time so you can
-        spend more time learning. Try the generator, browse example decks, or read our mission to see how it all works.
-      </p>
-      <p>
-        Get started now → <a href="generator.html">Open the Flashcard Generator</a>
-      </p>
-    </section>
+  <!-- ===== Main Content ===== -->
+  <div id="content">
+    <h1 id="main-title">QuickCards</h1>
 
-    <br>
-
-    <!-- ===== Key Benefits List ===== -->
-    <section aria-labelledby="benefits-title">
-      <h2 id="benefits-title">Why QuickCards?</h2>
-      <ul>
-        <li><strong>Speed:</strong> Generate a 10-card deck in seconds.</li>
-        <li><strong>Clarity:</strong> Clean, distraction-free interface.</li>
-        <li><strong>Consistency:</strong> Study more often with less setup.</li>
-      </ul>
-    </section>
+    <h2>Study Smarter, Not Longer</h2>
+    <p>
+      Welcome to <strong>QuickCards</strong>—the quickest way to create a ready-to-use deck of flashcards on any subject.
+      Type a topic, generate, and start studying. It’s <em>simple, focused,</em> and <strong>made for</strong> busy students.
+    </p>
+    <p>
+      Get started now → <a href="generator.html">Open the Flashcard Generator</a>
+    </p>
 
     <hr>
 
-    <!-- ===== Helpful Links ===== -->
-    <section aria-labelledby="links-title">
-      <h2 id="links-title">Helpful Links</h2>
-      <p>
-        • Relative link to this site’s existing page: <a href="index.html">Home </a><br>
-        • External resource : 
-        <a href="https://www.quizlet.com" target="_blank" rel="noopener">Quizlet</a><br>
-        • Email me : <a href="mailtobfakolujo@uri.edu">bfakolujo@uri.edu</a>
-      </p>
-    </section>
-  </main>
+    <h2>Why QuickCards?</h2>
+    <ul>
+      <li><strong>Speed:</strong> Generate a 10-card deck in seconds.</li>
+      <li><strong>Clarity:</strong> Clean, distraction-free interface.</li>
+      <li><strong>Consistency:</strong> Study more often with less setup.</li>
+    </ul>
 
-  <hr>
+    <hr>
 
-  
+    <h2>Helpful Links</h2>
+    <p>
+      • Relative link: <a href="homepage.html">Home</a><br>
+      • External resource: <a href="https://www.quizlet.com" target="_blank" rel="noopener">Quizlet</a><br>
+      • Email: <a href="mailto:bfakolujo@uri.edu">bfakolujo@uri.edu</a>
+    </p>
+  </div>
+
+  <footer class="site-footer">
+    &copy; 2025 QuickCards
+  </footer>
 </body>
 </html>
