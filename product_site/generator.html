@@ -1,15 +1,33 @@
-<!DOCTYPE html>
-<!--
-  Name: Babatunde Fajolujo
-  Date: 2025-09-26
-  File: generator.html (Flashcard Generator)
-  Desc: Topic input, options, preview, images, table, and video embed.
--->
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>QuickCards — Flashcard Generator</title>
+
+  <title>AI Flashcard Generator — Create Study Cards Online | QuickCards</title>
+  <meta name="description" content="Type a topic and instantly create study flashcards online with QuickCards. Free AI flashcard generator for students.">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QBNLP1D47K');
+  </script>
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI Flashcard Generator — QuickCards">
+  <meta property="og:description" content="Instantly create study flashcards online. Free and fast for students.">
+  <meta property="og:image" content="images/QuickCardslogo.png">
+  <meta property="og:url" content="generator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="QuickCards">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Flashcard Generator — QuickCards">
+  <meta name="twitter:description" content="Instantly create study flashcards online. Free and fast for students.">
+  <meta name="twitter:image" content="images/QuickCardslogo.png">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -17,7 +35,7 @@
   <!-- ===== Site Header ===== -->
   <div class="site-header">
     <header>
-      <img src="images/QuickCardslogo.png" alt="QuickCards logo" width="70" height="70">
+      <img src="images/QuickCardslogo.png" alt="QuickCards flashcard maker logo" width="70" height="70">
       <nav>
         <a href="homepage.html" class="nav-link">Home</a>
         <a href="generator.html" class="nav-link active">Flashcard Generator</a>
@@ -30,13 +48,13 @@
   <div id="content">
     <h1 id="main-title">Flashcard Generator</h1>
 
-    <h2>Type a Topic, Generate Cards</h2>
+    <h2>Type a Topic, Generate Flashcards</h2>
     <p>Enter a <strong>study topic</strong> and choose your deck options. Topic is required.</p>
 
     <!-- Form with validation and options -->
     <form action="#" method="get">
       <label for="topic">Enter Topic (required):</label><br>
-      <input id="topic" name="topic" type="text" placeholder="e.g., World War II" required maxlength="80"><br><br>
+      <input id="topic" name="topic" type="text" placeholder="e.g., World War II" required maxlength="80" aria-label="Enter a topic to create study flashcards online"><br><br>
 
       <fieldset>
         <legend>Deck Size</legend>
@@ -57,9 +75,11 @@
       <button type="submit" class="btn">Generate Flashcards</button>
     </form>
 
+    <p>Our <strong>AI flashcard generator</strong> creates <strong>custom study cards online</strong> in seconds so you can start learning faster.</p>
+
     <hr>
 
-    <h2>Generated Deck Preview</h2>
+    <h2>Flashcard Deck Preview</h2>
     <p>(Example flashcards generated for the topic <strong>World War II</strong>)</p>
     <ul>
       <li><strong>Allied Powers:</strong> US, UK, USSR and allies against Axis.</li>
@@ -71,9 +91,9 @@
 
     <hr>
 
-    <h2>How QuickCards Looks</h2>
-    <img src="images/studying.jpg" alt="Student studying with flashcards" class="float-right" width="320" height="320">
-    <img src="images/Flashcards Studying GIF by Hamelin Brands.gif" alt="Flashcards arranged neatly on a desk" class="float-left" width="320" height="200">
+    <h2>How the Flashcard Generator Looks</h2>
+    <img src="images/studying.jpg" alt="Student studying with flashcards made in QuickCards" class="float-right" width="320" height="320">
+    <img src="images/Flashcards Studying GIF by Hamelin Brands.gif" alt="Flashcards generated online using QuickCards" class="float-left" width="320" height="200">
     <p>
       Images are saved at display size to keep pages fast. Text wraps around the images so the content flows naturally
       without crowding the pictures.
@@ -83,7 +103,7 @@
 
     <h2>Deck Summary (Example)</h2>
     <table border="1" cellpadding="8" cellspacing="0">
-      <caption>Sample output details for generated decks</caption>
+      <caption>Sample output for generated flashcard decks</caption>
       <thead>
         <tr>
           <th>Topic</th><th>Cards</th><th>Estimated Study Time</th><th>Mode</th>
