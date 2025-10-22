@@ -1,0 +1,36 @@
+#sign {
+    font-size: 36px;
+    color: #4A4A4A;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-family: 'Helvetica Neue', sans-serif; 
+    margin-bottom: 20px;
+}
+
+
+
+
+.birthday {
+    font-size: 22px;
+    color: #4A4A4A; 
+    margin-bottom: 10px;
+    font-family: 'Helvetica Neue', sans-serif; 
+}
+
+
+.luckyNum {
+    font-size: 22px;
+    color: #4A4A4A;
+    font-family: 'Helvetica Neue', sans-serif; 
+    margin-bottom: 20px;
+}
+
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333; 
+    font-family: 'Georgia', serif; 
+    margin: 15px 0;
+}
