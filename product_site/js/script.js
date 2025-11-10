@@ -104,7 +104,7 @@ function showGreeting() {
 showGreeting();
 
 // =====================
-// Calculator (generator page only)
+// Calculator (generator page )
 // =====================
 if (form) {
   const topicInput = document.getElementById("topic");
