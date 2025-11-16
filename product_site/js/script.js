@@ -194,4 +194,47 @@ if (form) {
 
   // Initial run
   calculate();
+
+
+  // ===========================================
+// PART III: FORM EVENTS 
+// ===========================================
+
+if (form) {
+  const topicInput = document.getElementById("topic");
+
+  // Create a feedback area under input
+  const topicMsg = document.createElement("p");
+  topicMsg.id = "topic-feedback";
+  topicMsg.style.marginTop = "6px";
+  topicMsg.style.fontSize = "0.9rem";
+  form.insertBefore(topicMsg, form.children[2]);
+
+  // Focus event: show instructions
+  topicInput.addEventListener("focus", function () {
+    topicMsg.textContent = "Enter a topic (cannot be blank, max 80 characters).";
+    topicMsg.style.color = "#555";
+  });
+
+  // Blur event: validate
+  topicInput.addEventListener("blur", function () {
+    const value = topicInput.value.trim();
+    if (value.length === 0) {
+      topicMsg.textContent = "Error: Topic cannot be blank.";
+      topicMsg.style.color = "red";
+    } else {
+      topicMsg.textContent = "";
+    }
+  });
+
+  // Submit event: override default & confirm
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();  
+    const success = document.createElement("p");
+    success.textContent = "Your responses were successfully recorded!";
+    success.style.color = "green";
+    form.insertAdjacentElement("afterend", success);
+  });
+}
+
 }
